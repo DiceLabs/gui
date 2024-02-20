@@ -22,7 +22,7 @@ add_program_directories()
 ##############################################################################
 
 from PyQt5 import QtWidgets
-from mainwindow import MyWindow
+from home_page import HomePage
 from resources import STYLESHEET
 
 READ_MODE  = "r"
@@ -31,6 +31,6 @@ if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     with open(STYLESHEET, READ_MODE) as fh:
         app.setStyleSheet(fh.read())
-    window = MyWindow()
+    window = HomePage()
     window.show()
     sys.exit(app.exec_())

@@ -34,7 +34,7 @@
       </property>
       <layout class="QGridLayout" name="gridLayout">
        <item row="1" column="0">
-        <spacer name="verticalSpacer_4">
+        <spacer name="space3">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -47,7 +47,7 @@
         </spacer>
        </item>
        <item row="4" column="0">
-        <spacer name="verticalSpacer_3">
+        <spacer name="space2">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -60,7 +60,7 @@
         </spacer>
        </item>
        <item row="7" column="0">
-        <spacer name="verticalSpacer">
+        <spacer name="space">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -73,7 +73,7 @@
         </spacer>
        </item>
        <item row="6" column="0">
-        <spacer name="verticalSpacer_2">
+        <spacer name="space1">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -86,21 +86,21 @@
         </spacer>
        </item>
        <item row="0" column="0">
-        <widget class="QPushButton" name="home">
+        <widget class="QPushButton" name="home_page_btn">
          <property name="text">
           <string>Home</string>
          </property>
         </widget>
        </item>
        <item row="5" column="0">
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="mission_page_btn">
          <property name="text">
           <string>Missions</string>
          </property>
         </widget>
        </item>
        <item row="3" column="0">
-        <widget class="QPushButton" name="pid_control">
+        <widget class="QPushButton" name="control_page_btn">
          <property name="text">
           <string>Control</string>
          </property>
@@ -118,12 +118,12 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="page">
        <layout class="QGridLayout" name="gridLayout_6">
         <item row="7" column="1">
-         <widget class="QPushButton" name="pushButton_3">
+         <widget class="QPushButton" name="release_brakes_btn">
           <property name="text">
            <string>Release Arm Brakes</string>
           </property>
@@ -174,21 +174,21 @@
          </spacer>
         </item>
         <item row="2" column="1">
-         <widget class="QPushButton" name="pushButton">
+         <widget class="QPushButton" name="husky_driver_btn">
           <property name="text">
            <string>Start Husky Driver</string>
           </property>
          </widget>
         </item>
         <item row="9" column="1">
-         <widget class="QPushButton" name="pushButton_5">
+         <widget class="QPushButton" name="load_codebase_btn">
           <property name="text">
            <string>Load Codebase</string>
           </property>
          </widget>
         </item>
         <item row="5" column="1">
-         <widget class="QPushButton" name="pushButton_2">
+         <widget class="QPushButton" name="moveit_config_btn">
           <property name="text">
            <string>Start MoveIt Config</string>
           </property>
@@ -197,7 +197,7 @@
         <item row="0" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
-           <widget class="QLabel" name="label_2">
+           <widget class="QLabel" name="page_name_label">
             <property name="font">
              <font>
               <family>Lato</family>
@@ -215,7 +215,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QToolButton" name="home_2">
+           <widget class="QToolButton" name="page_forward_btn">
             <property name="text">
              <string>...</string>
             </property>
@@ -256,59 +256,7 @@
          </spacer>
         </item>
         <item row="10" column="1">
-         <layout class="QGridLayout" name="gridLayout_3">
-          <item row="0" column="0">
-           <spacer name="horizontalSpacer_2">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="0" column="1">
-           <widget class="QPushButton" name="kill_robot">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>100</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>KILL ROBOT</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <widget class="QPushButton" name="start_robot">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>100</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>LAUNCH ROBOT</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         <layout class="QGridLayout" name="gridLayout_3"/>
         </item>
        </layout>
       </widget>
@@ -343,7 +291,7 @@
            </spacer>
           </item>
           <item>
-           <widget class="QToolButton" name="home_1">
+           <widget class="QToolButton" name="page_back_btn">
             <property name="text">
              <string>...</string>
             </property>
