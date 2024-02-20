@@ -10,8 +10,9 @@ def add_program_directories():
     directories_to_add_to_path = [
         "src", 
         "util",
-        "src/home_page", 
-        "src/controller"
+        "src/home", 
+        "src/controller",
+        "src/utilities"
     ]
     for directory in directories_to_add_to_path:
         path = os.path.abspath(directory) 
