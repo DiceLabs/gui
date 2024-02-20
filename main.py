@@ -29,8 +29,7 @@ READ_MODE  = "r"
 if __name__ == '__main__':
     add_program_directories()
     app = QtWidgets.QApplication(sys.argv)
-    qss = STYLESHEET
-    with open(qss, READ_MODE) as fh:
+    with open(STYLESHEET, READ_MODE) as fh:
         app.setStyleSheet(fh.read())
     window = MyWindow()
     window.show()
