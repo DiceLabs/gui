@@ -1,12 +1,11 @@
-import subprocess
-from ssh_command_executor import execute_command_over_ssh
+from command_executor import execute_command_over_ssh, execute_command_local
 from husky_config import HUSKY_CONFIG
 
+C_EXECUTABLE_FOR_BRAKES = "release_brakes"
 HUSKY_DUAL_ARM_DRIVER_CMD = "roslaunch husky_ur_bringup husky_dual_ur_bringup.launch"
 UR_DUAL_ARM_MOVEIT_CMD = "roslaunch sds04_husky_moveit_config husky_dual_ur_robotiq_2f_85_moveit_planning_execution.launch"
-C_EXECUTABLE_FOR_BRAKES = "release_brakes"
-REMOVE_CODEBASE_CMD =  f"sudo rm -r {HUSKY_CONFIG.SERVER_DIRECTORY_AS_SEEN_FROM_SERVER}"
-REPLACE_CODEBASE_CMD = ["scp", "-r", HUSKY_CONFIG.CLIENT_DIRECTORY, HUSKY_CONFIG.SERVER_DIRECTORY]
+REMOVE_CODEBASE_CMD =  f"echo 'Remove Old Codebase from Server'; rm -r {HUSKY_CONFIG.SERVER_DIRECTORY}"
+REPLACE_CODEBASE_CMD = f"echo 'Copying Codebase to Server'; scp -r {HUSKY_CONFIG.CLIENT_DIRECTORY} {HUSKY_CONFIG.SCP_DIRECTORY}"
 
 def GO_TO_HOME_PAGE_ONE(home):
     home.stacked_widget.setCurrentIndex(0)
@@ -25,7 +24,7 @@ def MOVEIT_CONFIG_BTN():
 
 def LOAD_CODEBASE_BTN():
     execute_command_over_ssh(REMOVE_CODEBASE_CMD)
-    subprocess.Popen([REPLACE_CODEBASE_CMD])
+    execute_command_local(REPLACE_CODEBASE_CMD)
 
 def RELEASE_BRAKES_BTN():
     execute_command_over_ssh(C_EXECUTABLE_FOR_BRAKES)
