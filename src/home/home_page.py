@@ -12,7 +12,8 @@ from resources import MAINWINDOW_UI_FILE
     self.husky_driver_btn
     self.load_codebase_btn
     self.moveit_config_btn
-    self.release_brakes_bt
+    self.release_brakes_btn
+    self.polyscope_play_btn
 """
 
 class HomePage(QtWidgets.QMainWindow):
@@ -43,4 +44,4 @@ class HomePage(QtWidgets.QMainWindow):
         self.load_codebase_btn.clicked.connect(lambda: home_btn_handler.LOAD_CODEBASE_BTN())
         self.moveit_config_btn.clicked.connect(lambda: home_btn_handler.MOVEIT_CONFIG_BTN())
         self.release_brakes_btn.clicked.connect(lambda: home_btn_handler.RELEASE_BRAKES_BTN())
-
+        self.polyscope_play_btn.clicked.connect(lambda: home_btn_handler.POLYSCOPE_PLAY_BTN())

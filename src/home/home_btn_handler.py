@@ -1,7 +1,8 @@
-from command_executor import execute_command_over_ssh, execute_command_local
 from husky_config import HUSKY_CONFIG
+from command_executor import execute_command_over_ssh, execute_command_local
 
-C_EXECUTABLE_FOR_BRAKES = "release_brakes"
+C_EXECUTABLE_FOR_BRAKES = "release_brakes r"
+C_EXECUTABLE_FOR_PLAY = "release_brakes p"
 HUSKY_DUAL_ARM_DRIVER_CMD = "roslaunch husky_ur_bringup husky_dual_ur_bringup.launch"
 UR_DUAL_ARM_MOVEIT_CMD = "roslaunch sds04_husky_moveit_config husky_dual_ur_robotiq_2f_85_moveit_planning_execution.launch"
 REMOVE_CODEBASE_CMD =  f"echo 'Remove Old Codebase from Server'; rm -r {HUSKY_CONFIG.SERVER_DIRECTORY}"
@@ -28,3 +29,6 @@ def LOAD_CODEBASE_BTN():
 
 def RELEASE_BRAKES_BTN():
     execute_command_over_ssh(C_EXECUTABLE_FOR_BRAKES)
+
+def POLYSCOPE_PLAY_BTN():
+    execute_command_over_ssh(C_EXECUTABLE_FOR_PLAY)
