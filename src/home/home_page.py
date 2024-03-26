@@ -1,7 +1,8 @@
 import home_btn_handler 
-from PyQt5 import QtWidgets, uic
+from PyQt5 import QtWidgets, uic, QtGui
 from control_page import ControlPage
 from resources import MAINWINDOW_UI_FILE
+from resources import ICON
 
 """
     Available resources from UI
@@ -23,6 +24,7 @@ class HomePage(QtWidgets.QMainWindow):
         self.addPages()
         self.addIcons()
         self.connectButtons()    
+        self.setWindowIcon(QtGui.QIcon(ICON))
         
     def addPages(self):
         self.control_page = ControlPage()

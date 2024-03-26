@@ -8,8 +8,8 @@ def add_program_directories():
         Setup Environment
     """
     directories_to_add_to_path = [
-        "src", 
         "util",
+        "src", 
         "src/home", 
         "src/controller",
         "src/utilities"
